@@ -10,9 +10,9 @@ import Profile from '../../pages/Profile';
 
 const Layout = () => {
     return (
-        <>
+        <div >
             <Routes />
-        </>
+        </div>
     )
 }
 
