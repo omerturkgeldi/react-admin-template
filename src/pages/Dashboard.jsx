@@ -1,15 +1,38 @@
-import { useFormik } from "formik";
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Dashboard = () => {
-  const { handleSubmit,handleChange, searchValue } = useFormik({
-    initialValues: {
-      value: "",
-    },
-    onSubmit: values => {
-        console.log(values)
-    }
-  });
+
+  const [books, setBooks] = useState([]);
+  const [search, setSearch] = useState("charles");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+
+  useEffect(() => {
+    axios
+      .get(
+        'https://gutendex.com/books/?search='+ search
+      )
+      .then((res) => {
+        setBooks(res.data);
+        console.log(res.data);
+      })
+      .catch((error) => alert("Hata!"));
+  }, []);
+
+
+
+
+  // useEffect(() => {
+  //   axios.get(`https://gutendex.com/books/?search=dickens%20great`)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setAPIData(response.data);
+  //     })
+  // }, [])
 
   return (
     <div>
@@ -25,6 +48,7 @@ const Dashboard = () => {
             <div className="col-md-12">
               <div className="mb-3">
                 <input
+                  onChange={handleChange}
                   type="text"
                   className="form-control"
                   name="value"
@@ -36,6 +60,23 @@ const Dashboard = () => {
           </div>
         </div>
       </form>
+
+
+
+      {books.map((coin) => {
+        return (
+          <div>
+            {coin}
+          </div>
+        );
+      })}
+    
+
+
+
+
+
+
     </div>
   );
 };

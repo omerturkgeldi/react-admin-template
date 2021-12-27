@@ -2,9 +2,10 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 // import Dashboard from '../pages/Dashboard'
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile/Profile";
 import Bookshelf from "./pages/Bookshelf";
 import Dashboard from "./pages/Dashboard";
+import Book from "./pages/Book/Book";
 
 const Routes = () => {
   return (
@@ -12,6 +13,7 @@ const Routes = () => {
       <Route path="/" exact component={Dashboard} />
       <Route path="/profile" component={Profile} />
       <Route path="/bookshelf" component={Bookshelf} />
+      <Route path="/book/:id" component={Book} />
     </Switch>
   );
 };
