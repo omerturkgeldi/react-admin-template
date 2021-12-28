@@ -33,7 +33,6 @@ const Book = () => {
     <div className="container">
       {/* <h1>{bookId}</h1> */}
 
-      <a target='_blank' >{books && books.formats["text/html"]}</a>
 
       <div className="container">
         <div className="row">
@@ -41,7 +40,8 @@ const Book = () => {
             <img src={books && books.formats["image/jpeg"]} />
           </div>
           <div className="col-lg-8">
-            <h1>{books && books.title}</h1>
+            <h1 className="mb-4">{books && books.title}</h1>
+            <a target='_blank' >{books && books.formats["text/html"]}</a>
           </div>
         </div>
       </div>

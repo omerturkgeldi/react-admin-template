@@ -22,7 +22,7 @@ import './sidebar-resp'
 //     )
 // }
 
-const Sidebar = props => {
+const Sidebar = () => {
 
     // const activeItem = sidebar_items.findIndex(item => item.route === props.location.pathname)
 
@@ -50,7 +50,7 @@ const Sidebar = props => {
                                     Ana sayfa
                                 </span>
                             </Link>
-                            <Link userId={props.userId} to="/profile" className="nav_link">
+                            <Link to="/profile" className="nav_link">
                                 <i className='bx bx-book-reader nav_icon'></i>
                                 <span className="nav_name">
                                     Profil

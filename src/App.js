@@ -29,11 +29,11 @@ function App() {
             console.log("valuesssss", values);
 
             res.data.map((user) => {
-              console.log("user.username",user.username)
-              console.log("values.username",values.username)
-              console.log("user.password",user.password)
-              console.log("values.password",values.password)
-              if(user.username == values.username && String(user.password) == String(values.password)){
+              console.log("user.username", user.username)
+              console.log("values.username", values.username)
+              console.log("user.password", user.password)
+              console.log("values.password", values.password)
+              if (user.username == values.username && String(user.password) == String(values.password)) {
                 console.log(user.id)
                 setUserId(user.id);
                 setToken(true)
@@ -66,7 +66,6 @@ function App() {
   // }, []);
 
   // setToken(true);
-  const myFunc = () => {};
 
   if (!token) {
     return (
@@ -114,7 +113,7 @@ function App() {
                   </div>
 
                   <button
-                  type="submit"
+                    type="submit"
                     // onClick={() => myFunc()}
                     className="btn btn-danger btn-sm btn-raudus"
                   >
@@ -132,7 +131,7 @@ function App() {
   return (
     <Router >
       <div className="App">
-        <Sidebar  userId={userId}/>
+        <Sidebar />
         <div id="bodyId" style={{ marginTop: "130px" }}>
           <Layout />
         </div>

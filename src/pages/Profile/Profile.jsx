@@ -21,7 +21,7 @@ const Profile = (props) => {
 
 
     useEffect(() => {
-        axios.get(`https://localhost:5001/api/users/3`)
+        axios.get(`https://localhost:5001/api/users/10`)
             .then(res => {
                 let userInfoList = {
                     id: res.data.id,
@@ -52,12 +52,6 @@ const Profile = (props) => {
 
 
 
-    axios.get(`https://localhost:5001/api/users/3`)
-        .then(res => {
-
-
-        })
-        .catch(err => console.log(err));
 
     const { handleSubmit, handleChange, handleBlur, values, errors, touched } = useFormik({
         initialValues: {
@@ -75,7 +69,7 @@ const Profile = (props) => {
             console.log(values.foodName);
 
             // axios.get(`https://localhost:5001/api/users/9${values.foodName}`)
-            axios.get(`https://localhost:5001/api/users/9`)
+            axios.get(`https://localhost:5001/api/users/10`)
                 .then(res => {
                     let apiResult = res.data[0]
                     console.log(apiResult)
