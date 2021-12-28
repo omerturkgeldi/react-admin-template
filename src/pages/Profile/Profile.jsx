@@ -7,10 +7,11 @@ import axios from 'axios';
 
 
 
-const Profile = () => {
+const Profile = (props) => {
 
     const [user, setUser] = useState();
 
+    console.log(props.userId)
 
     function formatDate(date) {
         var newDate = date.split("T");
@@ -20,7 +21,7 @@ const Profile = () => {
 
 
     useEffect(() => {
-        axios.get(`https://localhost:5001/api/users/9`)
+        axios.get(`https://localhost:5001/api/users/3`)
             .then(res => {
                 let userInfoList = {
                     id: res.data.id,
@@ -51,7 +52,7 @@ const Profile = () => {
 
 
 
-    axios.get(`https://localhost:5001/api/users/9`)
+    axios.get(`https://localhost:5001/api/users/3`)
         .then(res => {
 
 

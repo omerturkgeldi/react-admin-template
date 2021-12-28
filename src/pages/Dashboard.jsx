@@ -21,11 +21,10 @@ const Dashboard = () => {
       })
       .catch((error) => alert("Hata!"));
   }, [search]);
-  var params = 0;
+
+
   const getButtonId = (e) => {
-    console.log(e.currentTarget.id);
-    params = { bookId: parseInt(e.currentTarget.id) , userId : 3, currentPage: 0};
-    console.log(params);
+    var params = { bookId: parseInt(e.currentTarget.id) , userId : 3, currentPage: 0};
     axios
       .post("https://localhost:5001/api/books", params)
       .then((res) => {
@@ -33,14 +32,6 @@ const Dashboard = () => {
       })
       .catch(console.log("hata"));
   };
-
-  // useEffect(() => {
-  //   axios.get(`https://gutendex.com/books/?search=dickens%20great`)
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setAPIData(response.data);
-  //     })
-  // }, [])
 
   return (
     <div>
@@ -65,7 +56,7 @@ const Dashboard = () => {
         </div>
       </form>
 
-      <div className="d-flex flex-column justify-content-center">
+      <div className="col-md-12 d-flex flex-column justify-content-center">
         {books &&
           books.map((book) => {
             return (

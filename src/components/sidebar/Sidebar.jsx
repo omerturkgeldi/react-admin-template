@@ -50,7 +50,7 @@ const Sidebar = props => {
                                     Ana sayfa
                                 </span>
                             </Link>
-                            <Link to="/profile" className="nav_link">
+                            <Link userId={props.userId} to="/profile" className="nav_link">
                                 <i className='bx bx-book-reader nav_icon'></i>
                                 <span className="nav_name">
                                     Profil
@@ -61,6 +61,9 @@ const Sidebar = props => {
                                 <span className="nav_name">
                                     Kitaplık
                                 </span>
+                            </Link>
+
+                            <Link to="/bookPage/:id" className="nav_link">
                             </Link>
                         </div>
                     </div> <a href="#" className="nav_link"> <i className='bx bx-log-out nav_icon'></i> <span className="nav_name">SignOut</span> </a>
