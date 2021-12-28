@@ -41,7 +41,7 @@ const Sidebar = props => {
                     <div>
                         <a href="#" className="nav_logo">
                             <i className='bx bx-layer nav_logo-icon'></i>
-                            <span className="nav_logo-name">BBBootstrap</span>
+                            <span className="nav_logo-name">Gutenberg Books</span>
                         </a>
                         <div className="nav_list">
                             <Link to="/" className="nav_link">

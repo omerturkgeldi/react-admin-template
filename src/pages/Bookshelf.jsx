@@ -58,36 +58,6 @@ const Profile = () => {
   return (
     <div className="container">
       <h1 className="d-flex justify-content-center">Kitaplığım</h1>
-      {/* <h2>{post.title}</h2> */}
-
-      {/* <div>
-        <h4>{post.authors[0].name}</h4>
-        <img src={post.formats["image/jpeg"]} />
-        <h4>{post.authors[0].birth_year}</h4>
-        <h4>{post.authors[0].death_year}</h4>
-        <div>
-          {post.subjects.map((text, index) => {
-            return <h1 key={index}>{text}</h1>;
-          })}
-        </div>
-      </div> */}
-
-      {books &&
-        books.map((book, index) => {
-          var iii = 0;
-          if (index % 3 == 0 && index != 0) {
-            iii++;
-            return (
-              <div className="bookshelf">
-                <div className="book-grid">
-                  <ul id={`ulid${iii}`}></ul>
-                </div>
-                <div className="shelf-shadows"></div>
-                <div className="shelf"></div>
-              </div>
-            );
-          }
-        })}
 
       {books &&
         books.map((bookArray, index) => {
@@ -115,58 +85,6 @@ const Profile = () => {
           );
         })}
 
-      {/* 
-      <div className="bookshelf">
-        <div className="book-grid">
-          <ul>
-            <li className="book">
-              <img src={post.formats["image/jpeg"]} alt="" />
-            </li>
-            <li className="book">
-              <img src={post.formats["image/jpeg"]} alt="" />
-            </li>
-            <li className="book">
-              <img src={post.formats["image/jpeg"]} alt="" />
-            </li>
-          </ul>
-        </div>
-        <div className="shelf-shadows"></div>
-        <div className="shelf"></div>
-      </div> */}
-
-      {/* 
-
-
-      <div className="row">
-        <div className="col">
-          <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} />
-        </div>
-        <div className="col">
-          <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} />
-        </div>
-        <div className="col">
-          <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} />
-        </div>
-      </div>
-
-      <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} />
-      <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} />
-      <Book title={post.title} img={post.formats["image/jpeg"]} authorName={post.authors[0].name} /> */}
-
-      {/* <div className="card" style={{ width: "18rem" }}>
-        <img
-          src={post.formats["image/jpeg"]}
-          className="card-img-top"
-          alt="..."
-        />
-        <div className="card-body">
-          <h5 className="card-title">{post.title}</h5>
-          <p className="card-text">{post.authors[0].name}</p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
-        </div>
-      </div> */}
     </div>
   );
 };
