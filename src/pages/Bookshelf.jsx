@@ -10,6 +10,15 @@ const baseURL = "https://gutendex.com/books/1997/";
 const books = [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
 
 
+// https://localhost:5001/api/books/user/{id}
+
+
+
+
+
+
+
+
 const Profile = () => {
   const [post, setPost] = useState("");
   useEffect(() => {
@@ -26,6 +35,7 @@ const Profile = () => {
 
   return (
     <div className="container">
+      <h1 className="d-flex justify-content-center">Kitaplığım</h1>
       {/* <h2>{post.title}</h2> */}
 
       {/* <div>
